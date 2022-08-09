@@ -16,10 +16,10 @@
   @Html.LabelFor(model => model.BasePrice)
   @Html.TextBoxFor(model => model.BasePrice, new { @type = "number", @min = "1" })
   <br>
-  @Html.Label("Select Size")
+  @* @Html.Label("Select size")
   <br>
   @Html.DropDownList("SizeId")
-  <br>
+  <br> *@
   <input type="submit" value="Add new menu item" class="cool" />
 }
 <p>@Html.ActionLink("Show all items", "Index")</p>

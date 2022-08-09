@@ -23,7 +23,7 @@ namespace Menu.Controllers
 
     public ActionResult Create()
     {
-      ViewBag.SizeId = new SelectList(_db.Sizes, "SizeId", "Name");
+      ViewBag.SizeId = new SelectList(_db.Sizes, "SizeId", "SizeName");
       return View();
     }
 
@@ -52,7 +52,7 @@ namespace Menu.Controllers
     public ActionResult Edit(int id)
     {
       var thisMenuItem = _db.MenuItems.FirstOrDefault(MenuItem => MenuItem.MenuItemId == id);
-      ViewBag.SizeId = new SelectList(_db.Sizes, "SizeId", "Name");
+      ViewBag.SizeId = new SelectList(_db.Sizes, "SizeId", "SizeName");
       return View(thisMenuItem);
     }
 
@@ -71,7 +71,7 @@ namespace Menu.Controllers
     public ActionResult AddSize(int id)
     {
       var thisMenuItem = _db.MenuItems.FirstOrDefault(MenuItem => MenuItem.MenuItemId == id);
-      ViewBag.SizeId = new SelectList(_db.Sizes, "SizeId", "Name");
+      ViewBag.SizeId = new SelectList(_db.Sizes, "SizeId", "SizeName");
       return View(thisMenuItem);
     }
 
