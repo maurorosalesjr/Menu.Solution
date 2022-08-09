@@ -1,0 +1,37 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Menu.Models.MenuItem
+
+<h2>Menu Item Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h5>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h5>
+<h5>Base Price: $@Html.DisplayFor(model => model.BasePrice)</h5>
+@* @if(@Model.JoinEntities.Count == 0)
+{
+  <p>This item does not have a size</p>
+}
+else
+{
+  <h4>Sizes this dish can be made in:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Size.SizeName</li>
+    @using (Html.BeginForm("DeleteSize", "MenuItems"))
+    {
+      @Html.Hidden("joinId", @join.MenuItemSizeId)
+      <input type="submit" value="Delete" class="button-55"/>
+    }
+  }
+  </ul>
+} *@
+
+
+
+@* <p>@Html.ActionLink("Add a Size", "AddSize", new { id = Model.MenuItemId })</p> *@
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit Menu Item", "Edit", new { id = Model.ItemId })</p>
+<p>@Html.ActionLink("Delete Menu Item", "Delete", new { id = Model.ItemId })</p>

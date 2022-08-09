@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Menu.Models.Size;
+@using Menu.Models;
+<h2>Size Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.SizeName): @Html.DisplayFor(model => model.SizeName)</h3>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>You need to create a size.</p>
+}
+else
+{
+  <h4>Items the Size contains:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.MenuItem.Name --- @join.MenuItem.Description</li>
+  }
+  </ul>
+}
+
+<p>@Html.ActionLink("Back to Sizes", "Index")</p>
+<p>@Html.ActionLink("Edit Size", "Edit", new { id = Model.SizeId })</p>
+<p>@Html.ActionLink("Delete Size", "Delete", new { id = Model.SizeId })</p>

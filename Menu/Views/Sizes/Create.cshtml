@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+@model YeOldeInvMany.Models.Size
+
+<h2>Add a new Size</h2>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.SizeName)
+  @Html.TextBoxFor(model => model.SizeName)
+  <input type="submit" value="Add new Size" class="button-55"/>
+}
+<p>@Html.ActionLink("Show all Sizes", "Index")</p>

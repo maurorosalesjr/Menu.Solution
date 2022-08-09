@@ -1,0 +1,17 @@
+@model Menu.Models.MenuItem
+
+<h2>Add a Size</h2>
+
+<h4>Add a Size to this dish: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.MenuItemId)
+
+    @Html.Label("Select size")
+    @Html.DropDownList("SizeId")
+
+    <input type="submit" value="Save" class="button-55" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>

@@ -1,0 +1,31 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Menu.Models.MenuItem
+
+<h2>Edit</h2>
+
+<h4>Edit this item: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MenuItemId)
+
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+  <br>
+  @Html.LabelFor(model => model.Description)
+  @Html.EditorFor(model => model.Description)
+  <br>
+  @Html.LabelFor(model => model.BasePrice)
+  @Html.TextBoxFor(model => model.BasePrice, new { @type = "number", @min = "1" })
+  <br>
+  @Html.Label("Select size")
+  <br>
+  @Html.DropDownList("SizeId")
+
+  <input type="submit" value="Save" class="button-55"/>
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
