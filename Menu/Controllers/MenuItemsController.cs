@@ -68,7 +68,7 @@ namespace Menu.Controllers
       return RedirectToAction("Index");
     }
 
-    public ActionResult AddSize(int id)
+    public ActionResult AddOrder(int id)
     {
       var thisMenuItem = _db.MenuItems.FirstOrDefault(MenuItem => MenuItem.MenuItemId == id);
       ViewBag.SizeId = new SelectList(_db.Sizes, "SizeId", "SizeName");
@@ -76,7 +76,7 @@ namespace Menu.Controllers
     }
 
     [HttpPost]
-    public ActionResult AddSize(MenuItem MenuItem, int SizeId)
+    public ActionResult AddOrder(MenuItem MenuItem, int SizeId)
     {
       if (SizeId != 0)
       {

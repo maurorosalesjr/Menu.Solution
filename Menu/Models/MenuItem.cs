@@ -13,6 +13,7 @@ namespace Menu.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public int BasePrice { get; set; }
+        public int OrderId { get; set; }
 
         public virtual ICollection<MenuItemSize> JoinEntities { get;}
     }

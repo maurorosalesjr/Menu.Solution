@@ -8,6 +8,5 @@ namespace Menu.Models
         public int OrderId { get; set; }
         public virtual Size Size { get; set; }
         public virtual MenuItem MenuItem { get; set; }
-        public virtual Order Order { get; set; }
     }
 }
