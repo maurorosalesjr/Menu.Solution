@@ -7,6 +7,7 @@ namespace Menu.Models
     public DbSet<MenuItem> MenuItems { get; set; }
     public DbSet<Size> Sizes { get; set; }
     public DbSet<MenuItemSize> MenuItemSize { get; set; }
+    public DbSet<Order> Orders { get; set; }
 
     public MenuContext(DbContextOptions options) : base(options) { }
 

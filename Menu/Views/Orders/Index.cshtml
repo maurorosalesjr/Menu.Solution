@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+@model List<Menu.Models.Order>;
+@using Menu.Models;
+
+<h1>Order Menu</h1>
+
+<h3>@Html.ActionLink("Create Order", "Create")</h3>
+<h7>@Html.ActionLink("View Orders", "Details")</h7>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

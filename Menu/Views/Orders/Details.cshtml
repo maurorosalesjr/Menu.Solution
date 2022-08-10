@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Menu.Models.Order
+
+<h1>Orders in:</h1>
+
+@using (Html.BeginForm())
+{
+<ul>
+  @foreach (var join in Model.JoinEntities)
+  {
+    <li>@join.MenuItem.Name | @join.Size.SizeName</li>
+  }
+</ul>
+}
+
+<p>@Html.ActionLink("Create Order", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
