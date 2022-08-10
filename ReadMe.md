@@ -18,7 +18,7 @@
 
 
 
-![SQL Design](wwwroot/img/SQLDesign.png "SQL Design")
+![SQL Design](Menu/wwwroot/img/SQLDesigner.png "SQL Design")
 
 ## Setup/Installation Requirements
 
