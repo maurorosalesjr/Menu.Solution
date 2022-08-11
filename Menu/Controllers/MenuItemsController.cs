@@ -70,7 +70,7 @@ namespace Menu.Controllers
 
     public ActionResult AddOrder(int id)
     {
-      var thisMenuItem = _db.MenuItems.FirstOrDefault(MenuItem => MenuItem.MenuItemId == id);
+    var thisMenuItem = _db.MenuItems.ToList();
       ViewBag.SizeId = new SelectList(_db.Sizes, "SizeId", "SizeName");
       return View(thisMenuItem);
     }
